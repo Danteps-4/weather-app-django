@@ -1,0 +1,4 @@
+venv
+API_KEY
+__pycache__
+db.sqlite3
