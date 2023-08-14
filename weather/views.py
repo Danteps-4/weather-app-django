@@ -1,10 +1,11 @@
+import os
 from django.shortcuts import render
 import datetime
 import requests
 
 # Create your views here.
 def index(request):
-    API_KEY = open("API_KEY", "r").read()
+    API_KEY = os.environ.get("API_KEY")
     current_weather_url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
     forecast_url = "https://api.openweathermap.org/data/2.5/onecall?lat={}&lon={}&exclude=current,minutely,hourly,alerts&appid={}"
 
